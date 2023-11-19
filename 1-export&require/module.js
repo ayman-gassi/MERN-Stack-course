@@ -1,0 +1,7 @@
+console.log('method 1 to import')
+let people = require('./people')
+console.log(people)
+console.log('method 2 to import')
+let {class1,class2} = require('./people')
+console.log(class1)
+console.log(class2)

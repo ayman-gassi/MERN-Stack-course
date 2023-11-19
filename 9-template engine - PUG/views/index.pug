@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel='stylesheet', type='text/css', href='/style/style.css')
+    body 
+        - const greeting = 'Hello, World'
+        h1= "+ " + greeting +" +"  
+        h2 Name :  #{user.email}
+        h2 Score : #{user.score}
+        h3 Email : #{session.UserEmail}
+        h3 Password : #{session.UserPassword}
+            

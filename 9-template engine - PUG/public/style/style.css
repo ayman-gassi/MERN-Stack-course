@@ -1,0 +1,12 @@
+body{
+    margin: 20px;
+}
+input,label{
+    display: block;
+}
+form{
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid black;
+    margin: auto;
+}
