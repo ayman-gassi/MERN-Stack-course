@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title HomePage
+        link(rel="stylesheet", href="style/home.css")
+    body 
+        div(class="Container")
+            div(class="Section0")
+                if logged.islogged
+                    img(src=`/img/${logged.session.ProfilId}.png`, alt="profile pic")
+                    p #{logged.session.FirstName} #{logged.session.LastName} 
+                    p - #{logged.session.Field} 
+                    button(type="button") Profil
+                    button(type="button") Logout
+                else
+                    button(type="button",onClick="window.location='/login'") Login
+            div(class="Section1")
+                form(action="/Newpost", method="post") 
+                    textarea(name="newpost", cols="30", rows="7", placeholder="Write your Question here...").
+                    button(type="submit") Post
+            div(class="Section2")
+                if alldata
+                    each data in alldata
+                        div(class="Post")
+                            div(class="Post-header")
+                                h2(class="Post-title") Title
+                                p(class="Post-author") #{data.FirstName} #{data.LastName}
+                                    strong  22:42 22/11/2023
+                            div(class="Post-content")
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et massa nec libero tincidunt accumsan.
+                else    
+                    div(class="Post") No DATA FOUND 
+
+            

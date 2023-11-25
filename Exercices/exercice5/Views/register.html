@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterPage</title>
+    <link rel="stylesheet" href="style/Authentification.css">
+  </head>
+  <body>
+    <div class="Container">
+      <h2>Register</h2>
+      <form action="/Login" method="post">
+        <label for="Fname">First Name</label>
+        <input type="text" required="true" name="Fname">
+        <label for="Lname">Last Name</label>
+        <input type="text" required="true" name="Lname">
+        <label for="email">Email</label>
+        <input type="email" required="true" name="email">
+        <label for="password">Password</label>
+        <input type="text" name="password" required="true" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number with a minimum length of 8 characters">
+        <label for="Cpassword">Confirm Password</label>
+        <input type="text" name="Cpassword" required="true" id="Cpassword" title="Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number with a minimum length of 8 characters">
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account?<a href="/Login">Login</a></p>
+    </div>
+  </body>
+</html>

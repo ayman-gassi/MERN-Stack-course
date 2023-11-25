@@ -1,0 +1,112 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Container styles */
+  .Container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Section 1 (Post creation) styles */
+  .Section1 {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Section1 form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Section1 textarea {
+    resize: vertical;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .Section1 button {
+    padding: 10px 20px;
+    background-color: #3366ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Section 2 (All posts) styles - customize as needed for post display */
+  
+  /* Section 3 (User profile) styles */
+  .Section0 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .Section0 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .Section0 p {
+    margin-right: 10px;
+  }
+  
+  .Section0 button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #3366ff;
+  }
+  .Section2{
+    margin-top: 10px;
+  }
+  .Post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Post-title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .Post-author {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .Post-content p {
+    line-height: 1.6;
+    color: #444;
+  }

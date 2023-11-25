@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login 
+        link(rel="stylesheet", href="style/Authentification.css")
+    body 
+        div(class="Container")  
+            h2 Login
+            form(action="/Login", method="post") 
+                label(for="email") Email
+                input(type="email", name="email",id="email")
+                label(for="password") Password
+                input(type="password", name="password",id="password")
+                div(class="Alert")
+                button(type="submit") Login 
+            p Don't have account ? 
+                a(href="/register") Create Account  
