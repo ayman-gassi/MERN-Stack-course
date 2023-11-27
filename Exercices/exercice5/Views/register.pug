@@ -8,11 +8,13 @@ html(lang="en")
   body
     div(class="Container")
       h2 Register
-      form(action="/Login", method="post")
+      form(action="/auth/reg", method="post")
         label(for="Fname") First Name
         input(type="text",required="true", name="Fname")
         label(for="Lname") Last Name
         input(type="text",required="true", name="Lname")
+        label(for="Fname") Field
+        input(type="text",required="true", name="field")
         label(for="email") Email
         input(type="email",required="true", name="email")
         label(for="password") Password

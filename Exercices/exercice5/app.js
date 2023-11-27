@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 Client.connect('mongodb+srv://ayman_gs:Theonly_XjonSnow2003@cluster0.ukaeqke.mongodb.net/',{dbName : 'ESTE'}).then((client)=>{
     console.log("Connection Done");
     app.get('/', (req, res) => {
-        res.redirect('/homepage');
+        res.redirect('/question');
       });
     app.use('/question',QuestionRouter)
     app.use('/auth',UserRouter)
@@ -29,4 +29,4 @@ Client.connect('mongodb+srv://ayman_gs:Theonly_XjonSnow2003@cluster0.ukaeqke.mon
 
 
 
-app.listen(5500)
+app.listen(5000)

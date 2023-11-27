@@ -6,5 +6,5 @@ const blog = new Schema({
     Student: String,
   });
   
-  const Blog = model('blogs', blog);
+  const Blog = model('blog', blog);
   module.exports = {Blog}

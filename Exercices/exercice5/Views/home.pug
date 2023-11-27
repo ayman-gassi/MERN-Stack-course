@@ -13,12 +13,14 @@ html(lang="en")
                     p #{logged.session.FirstName} #{logged.session.LastName} 
                     p - #{logged.session.Field} 
                     button(type="button") Profil
-                    button(type="button") Logout
+                    form(action="auth/logout", method="get") 
+                        button(type="submit") Logout
                 else
                     button(type="button",onClick="window.location='/auth/login'") Login
             if logged.islogged
                 div(class="Section1")
-                    form(action="/Newpost", method="post") 
+                    form(action="question/newQuestion", method="post") 
+                        input(type="text", name="title", placeholder="Title of your Question")
                         textarea(name="newpost", cols="30", rows="7", placeholder="Write your Question here...").
                         button(type="submit") Post
             else 
@@ -26,13 +28,14 @@ html(lang="en")
             div(class="Section2")
                 if alldata
                     each data in alldata
-                        div(class="Post")
+                        div(class="Post",id="")
                             div(class="Post-header")
-                                h2(class="Post-title") Title
-                                p(class="Post-author") #{data.FirstName} #{data.LastName}
-                                    strong  22:42 22/11/2023
+                                h2(class="Post-title") #{data.Title}
+                                p(class="Post-author") #{data.Student}
+                                    strong  #{data.Date}
                             div(class="Post-content")
-                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et massa nec libero tincidunt accumsan.
+                                p #{data.Text}
+                                a(href="",class="reply-link") repondre a la question
                 else    
                     div(class="Post") No DATA FOUND 
 

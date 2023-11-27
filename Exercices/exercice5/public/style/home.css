@@ -38,6 +38,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  .Section1 input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
   
   .Section1 button {
     padding: 10px 20px;
@@ -110,3 +116,15 @@
     line-height: 1.6;
     color: #444;
   }
+  .reply-link {
+    color: blue; /* Change the color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it bold */
+}
+
+.reply-link:hover {
+    color: darkblue; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+    /* Add other hover effects if needed */
+}
+  

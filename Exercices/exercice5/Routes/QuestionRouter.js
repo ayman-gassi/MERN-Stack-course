@@ -1,4 +1,4 @@
-const {getAllBlogs} = require('../controllers/QuestionController')
+const {getAllBlogs,addBlogs} = require('../controllers/QuestionController')
 const router = require('express').Router()
 router.get('/',async(req,res)=>{
     let logged ;
@@ -8,10 +8,11 @@ router.get('/',async(req,res)=>{
     else{
         logged = {islogged : false}
     }
-    let users = await getAllBlogs()
+    let users = await getAllBlogs() 
     res.render('home',{logged : logged, alldata :users})
 })
-router.post('NewBlog',(req,res)=>{
-    
+router.post('/newQuestion',async(req,res)=>{
+    await addBlogs(req.body.title,req.body.newpost,req.session.user.Email)
+    res.redirect('/')
 })
 module.exports=router;
