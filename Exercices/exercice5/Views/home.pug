@@ -15,11 +15,14 @@ html(lang="en")
                     button(type="button") Profil
                     button(type="button") Logout
                 else
-                    button(type="button",onClick="window.location='/login'") Login
-            div(class="Section1")
-                form(action="/Newpost", method="post") 
-                    textarea(name="newpost", cols="30", rows="7", placeholder="Write your Question here...").
-                    button(type="submit") Post
+                    button(type="button",onClick="window.location='/auth/login'") Login
+            if logged.islogged
+                div(class="Section1")
+                    form(action="/Newpost", method="post") 
+                        textarea(name="newpost", cols="30", rows="7", placeholder="Write your Question here...").
+                        button(type="submit") Post
+            else 
+                h2 - Login to write your Question -
             div(class="Section2")
                 if alldata
                     each data in alldata
