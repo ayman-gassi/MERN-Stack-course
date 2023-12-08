@@ -8,8 +8,8 @@ router.get('/',async(req,res)=>{
     else{
         logged = {islogged : false}
     }
-    let users = await getAllBlogs() 
-    res.render('home',{logged : logged, alldata :users})
+    let data = await getAllBlogs()
+    res.render('home',{logged : logged, alldata :data})
 })
 router.post('/newQuestion',async(req,res)=>{
     await addBlogs(req.body.title,req.body.newpost,req.session.user.Email)

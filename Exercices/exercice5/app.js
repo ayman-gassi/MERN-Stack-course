@@ -1,5 +1,6 @@
 const UserRouter = require('./Routes/UserRouter')
 const QuestionRouter = require('./Routes/QuestionRouter')
+const ReponseRouter = require('./Routes/ReponseRouter')
 const express = require('express') 
 const Client = require('mongoose')
 const app = express()
@@ -21,6 +22,7 @@ Client.connect('mongodb+srv://ayman_gs:Theonly_XjonSnow2003@cluster0.ukaeqke.mon
         res.redirect('/question');
       });
     app.use('/question',QuestionRouter)
+    app.use('/Reply',ReponseRouter)
     app.use('/auth',UserRouter)
 })
 .catch((e)=>{

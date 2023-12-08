@@ -12,7 +12,6 @@ html(lang="en")
                     img(src=`/img/${logged.session.ProfilId}.png`, alt="profile pic")
                     p #{logged.session.FirstName} #{logged.session.LastName} 
                     p - #{logged.session.Field} 
-                    button(type="button") Profil
                     form(action="auth/logout", method="get") 
                         button(type="submit") Logout
                 else
@@ -27,15 +26,14 @@ html(lang="en")
                 h2 - Login to write your Question -
             div(class="Section2")
                 if alldata
-                    each data in alldata
-                        div(class="Post",id="")
+                    each data in alldata.blogs
+                        div(class="Post",id=data._id)
                             div(class="Post-header")
                                 h2(class="Post-title") #{data.Title}
                                 p(class="Post-author") #{data.Student}
                                     strong  #{data.Date}
                             div(class="Post-content")
                                 p #{data.Text}
-                                a(href="",class="reply-link") repondre a la question
                 else    
                     div(class="Post") No DATA FOUND 
 

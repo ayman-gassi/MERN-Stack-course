@@ -1,7 +1,7 @@
 const {Student} = require('../Models/Student')
 async function getStudentByEmail(email){
          try {
-            const result = await Student.find({Email : email})
+            const result = await Student.findOne({Email : email})
             return result;
         } catch (e) {
             console.log(e);

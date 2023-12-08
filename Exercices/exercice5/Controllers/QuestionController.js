@@ -1,8 +1,15 @@
 const session = require('express-session');
 const {Blog} = require('../Models/Blog')
+const {getAllRepliesByBlog} = require('../Controllers/ReponseController')
 async function getAllBlogs(){
          try {
-            const result = await Blog.find()
+            const blogs = await Blog.find()
+            const reponse = await getAllRepliesByBlog(blogs._id)
+            console.log(reponse)
+            const result = {
+                    blogs : blogs,
+                    reponses : reponse
+            }
             return result;
         } catch (e) {
             console.log(e);
